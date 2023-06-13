@@ -9,12 +9,12 @@ var startgame = function() {
 
     let userInput = prompt("pick R,P or S");
 
-     if (userInput === "r" || userInput === "s" || userInput === "p"){
+     if (userInput === "r" || userInput === "s" || userInput === "p") {
         console.log(userInput);
     } else {
         alert("pick r,p or s");
         startgame();
-    }
+    };
 
     var choice = Math.floor(Math.random() * options.length);
     alert("the computer chose: "+ options[choice]);
@@ -37,14 +37,17 @@ var startgame = function() {
 
 function playAgain() {
     if (window.confirm ("The score is: " + scoreboard.wins + " Wins and: " + scoreboard.losses + " Losses and: " + scoreboard.ties + " Ties, Do you want to play again")) {
+        console.log("wins " + scoreboard.wins);
+        console.log("Losses " + scoreboard.losses);
+        console.log("Ties " + scoreboard.ties);
         startgame();
         } else { alert("The score is: " + scoreboard.wins + " Wins and: " + scoreboard.losses + " Losses and: " + scoreboard.ties + " Ties")
         }
-}
-console.log("wins "+ scoreboard.wins);
-console.log("Losses "+ scoreboard.losses);
-console.log("Ties "+ scoreboard.ties);
+    };   
 playAgain();
+console.log("wins " + scoreboard.wins);
+console.log("Losses " + scoreboard.losses);
+console.log("Ties " + scoreboard.ties);  
 };
 
 startgame();
