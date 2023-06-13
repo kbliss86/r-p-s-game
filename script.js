@@ -37,17 +37,16 @@ var startgame = function() {
 
 function playAgain() {
     if (window.confirm ("The score is: " + scoreboard.wins + " Wins and: " + scoreboard.losses + " Losses and: " + scoreboard.ties + " Ties, Do you want to play again")) {
-        console.log("wins " + scoreboard.wins);
-        console.log("Losses " + scoreboard.losses);
-        console.log("Ties " + scoreboard.ties);
         startgame();
         } else { alert("The score is: " + scoreboard.wins + " Wins and: " + scoreboard.losses + " Losses and: " + scoreboard.ties + " Ties")
         }
-    };   
-playAgain();
+    };
 console.log("wins " + scoreboard.wins);
 console.log("Losses " + scoreboard.losses);
 console.log("Ties " + scoreboard.ties);  
+playAgain();  
 };
-
+console.log("wins " + scoreboard.wins);
+console.log("Losses " + scoreboard.losses);
+console.log("Ties " + scoreboard.ties); 
 startgame();
